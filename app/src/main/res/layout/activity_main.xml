@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sj971.lab2.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1,2">
+
+            <TableRow>
+                <TextView
+                    android:padding="10dp"
+                    android:text="NAME: "
+                    android:layout_width="wrap_content"/>
+
+                <EditText android:id="@+id/getName"/>
+            </TableRow>
+        </TableLayout>
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            //When clear button is clicked, call 'clearButtonClicked'
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CLEAR"
+                android:onClick="clearButtonClicked" />
+
+            //When print button is clicked, call 'printButtonClicked'
+            <Button
+                android:id="@+id/print"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRINT"
+                android:onClick="printButtonClicked"
+                android:layout_toRightOf="@+id/clear"/>
+
+            //To print name which one get from user
+            <TextView
+                android:id="@+id/printName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/clear"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
