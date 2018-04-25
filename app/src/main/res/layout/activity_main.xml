@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sj971.lab3_2.MainActivity">
+
+    //Using TableLayout, Design the layout
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*">
+
+        //For get Name
+        <TableRow>
+            <TextView android:text="성명 "/>
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_span="2"/>
+        </TableRow>
+
+        //For get sex
+        <TableRow>
+            <TextView android:text="성별 "/>
+
+            //User can choose only one sex, So use Radio Button
+            <RadioGroup
+                android:id="@+id/group"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/manButton"
+                    android:text="남"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/womanButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="여" />
+            </RadioGroup>
+        </TableRow>
+
+        //For get user's choice
+        <TableRow>
+            <TextView android:text="수신여부 "/>
+
+            //User can choice one, or two or everything
+            <CheckBox
+                android:id="@+id/snsButton"
+                android:text="SMS"/>
+
+            <CheckBox
+                android:id="@+id/emailButton"
+                android:text="e-mail"/>
+        </TableRow>
+
+        //To go next step
+        //Print the user information on other activity
+        <TableRow>
+            <Button
+                android:id="@+id/button1"
+                android:text="등록"
+                android:layout_column="2"/>
+        </TableRow>
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>

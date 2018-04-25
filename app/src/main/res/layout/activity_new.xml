@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sj971.lab3_2.NewActivity">
+
+    //Using Table layout, print user information
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*">
+
+        //To print user name
+        <TableRow>
+            <TextView android:text="성명 "/>
+            <TextView android:id="@+id/nameText"/>
+        </TableRow>
+
+        //To print user sex
+        <TableRow>
+            <TextView android:text="성별 "/>
+            <TextView android:id="@+id/sexText"/>
+        </TableRow>
+
+        //To print user choice
+        <TableRow>
+            <TextView android:text="수신여부 "/>
+            <TextView android:id="@id/editText"/>
+        </TableRow>
+
+        //To go back input information page
+        <TableRow>
+            <Button
+                android:id="@+id/backButton"
+                android:text="이전"
+                android:layout_column="2"/>
+        </TableRow>
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
