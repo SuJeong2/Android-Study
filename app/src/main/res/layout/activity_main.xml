@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sj971.lab5_2.MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*">
+
+        <TableRow>
+            <TextView
+                android:text="Facto Thread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:textSize="40dp"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+
+        <TableRow>
+            <!-- Input area which user type the number-->
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="n"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CALCULATE"/>
+        </TableRow>
+
+        <TableRow>
+            <!--To show the numbers from n to 1-->
+            <TextView
+                android:id="@+id/textView"
+                android:layout_span="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+
+        <TableRow>
+            <!-- To show the result of factorial calculate of n-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/resultView"
+                android:textSize="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_span="2"/>
+        </TableRow>
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
