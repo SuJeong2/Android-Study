@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sj971.lab6_2.MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:stretchColumns="*">
+
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shared preference example"
+                android:layout_span="3"
+                android:textSize="30dp"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:text="학번"/>
+
+            <EditText
+                android:layout_span="2"
+                android:id="@+id/student_number"
+                android:hint="..."/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:text="이름"/>
+
+            <EditText
+                android:layout_span="2"
+                android:id="@+id/student_name"
+                android:hint="..."/>
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/getButton"
+                android:text="불러오기"/>
+
+            <Button
+                android:id="@+id/storeButton"
+                android:text="저장하기"/>
+
+            <Button
+                android:id="@+id/resetButton"
+                android:text="초기화"/>
+        </TableRow>
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
