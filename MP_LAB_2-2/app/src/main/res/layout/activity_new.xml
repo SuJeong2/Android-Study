@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sj971.lab2_2.NewActivity">
+
+    //To arrange the text field and buttons, use relative layout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">\
+
+        //To write the url which user input
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textField"/>
+
+        //Button for go next step
+        <Button
+            android:id="@+id/goButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textField"
+            android:layout_marginLeft="100dp"
+            android:layout_marginStart="100dp"
+            android:text="GO" />
+
+        //Button for go back before step
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textField"
+            android:layout_toEndOf="@+id/goButton"
+            android:layout_toRightOf="@+id/goButton"
+            android:text="BACK" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
