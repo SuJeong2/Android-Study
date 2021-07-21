@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sj971.lab3_3_r.MainActivity">
+
+    //To make 2 buttons and FrameLayout for 2 fragment, Use RelativeLayout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/TAB1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TAB 1" />
+
+        <Button
+            android:id="@+id/TAB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/TAB1"
+            android:text="TAB 2" />
+
+
+        <FrameLayout
+            android:id="@+id/framelayout_for_fragment"
+            android:layout_below="@+id/TAB1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            //First fragment
+            <fragment
+                android:id="@+id/firstFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.example.sj971.lab3_3_r.Fragment1"/>
+
+            //Second fragment
+            <fragment
+                android:id="@+id/secondFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.example.sj971.lab3_3_r.Fragment2"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
